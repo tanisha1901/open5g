@@ -1,0 +1,17 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app.kubernetes.io/instance: open5g-app
+    epc-mode: webui
+  name: open5gs-webui
+  namespace: openshift-argocd
+spec:
+  host: open5gs-webui-openshift-gitops.apps.ocp8.example.local
+  port:
+    targetPort: 3000
+  to:
+    kind: Service
+    name: open5gs-webui
+    weight: 100
+  wildcardPolicy: None

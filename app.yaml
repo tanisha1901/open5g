@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: open5g-core
+  namespace: openshift-argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/tanisha1901/open5gcore
+    path: helm-chart
+    targetRevision: open5g
+  destination:
+    namespace: openshift-argocd
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
+    syncOptions:
+      - CreateNamespace=true
+
