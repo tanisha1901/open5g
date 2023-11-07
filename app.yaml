@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/tanisha1901/open5gcore
+    repoURL: https://github.com/tanisha1901/open5g
     path: helm-chart
     targetRevision: open5g
   destination:
