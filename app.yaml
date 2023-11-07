@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: open5g-core
+  name: open5g-new
   namespace: openshift-argocd
 spec:
   project: default
